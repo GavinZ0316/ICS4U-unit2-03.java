@@ -1,0 +1,36 @@
+/****************************************************
+*Daily assignment2-03
+*Created by Gavin Zhou
+*Created on 2019-03-20
+*****************************************************/
+
+import java.util.ArrayList;
+import java.util.EmptyStackException;
+
+class MrCoxallStack {
+	
+	ArrayList<Integer> list = new ArrayList<Integer> ();
+	
+	public void push(int userInput) {
+		list.add(userInput);
+	}
+	
+	public void pop() {
+		// if no value in the list show
+		if (list.size() == 0 || list.size() < 0) {
+			System.out.println("The arrayList is empty! ");
+		// if user want take out the last value
+		else {
+			list.remove(list.size()-1);
+		}
+	}
+	// show list 
+	public void print() {
+		System.out.println(list);
+	}
+	// show user how many in the list
+	public void count() {
+		System.out.println("The length of the arrayList is " + list.size());
+	}
+	
+}
